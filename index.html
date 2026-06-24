@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+</head>
+
+<body id="body" class="white-mode">
+
+    <header class="mods">
+        <button id="black">Black Mode</button>
+        <button id="white">White Mode</button>
+    </header>
+
+    <div class="cont">
+
+        <div class="button">
+            <button class="btn-home" onclick="openCard('pup')">Home</button>
+            <button class="btn-home" onclick="openCard('puuup')">Projects</button>
+            <button class="btn-home" onclick="openCard('puup')">Price</button>
+            <button class="btn-home" onclick="openCard('m')">Cell</button>
+        </div>
+
+        <div class="card" id="pup">
+            <h1>Hello</h1>
+            <h3>I am Mohammed Baher</h3>
+            <h4>--- I am Web Developer ---</h4>
+            <p>I can make web apps for you.</p>
+            <button class="btn-close" onclick="closeCard('pup')">Close</button>
+        </div>
+
+        <div class="card" id="m">
+            <h1>Contact Me</h1>
+            <p>Phone: 01555854774</p>
+            <p>Email: mohammedbaher556@gmail.com</p>
+            <h5>and WhatsApp</h5>
+
+            <a href="https://wa.me/2001555854774" class="whatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <button class="btn-close" onclick="closeCard('m')">Close</button>
+        </div>
+
+        <div class="card" id="puuup">
+            <h1>Hello</h1>
+
+            <img src="mm.png" class="old" alt="Old Website">
+
+            <h3>Do you want to see my old website?</h3>
+
+            <span>You can copy the link:</span>
+
+            <br><br>
+
+            <a href="#" >
+                https://my-web-git-main-mohammedcom.vercel.app/index.html
+            </a>
+
+            <p>You can visit the link.</p>
+            <p>Now I developed it to be like this app. You can see the change that happened.</p>
+
+            <button class="btn-close" onclick="closeCard('puuup')">Close</button>
+        </div>
+
+        <div class="card" id="puup">
+            <h1>Price</h1>
+            <h3>From <span>$10</span> To <span>$100</span></h3>
+            <h4>We use HTML, CSS and JavaScript</h4>
+            <p>We use VS Code</p>
+
+            <button class="btn-close" onclick="closeCard('puup')">Close</button>
+        </div>
+
+    </div>
+
+    <script>
+
+        function closeAllCards() {
+            document.querySelectorAll('.card').forEach(card => {
+                card.classList.remove('open');
+            });
+        }
+
+        function openCard(id) {
+            closeAllCards();
+            document.getElementById(id).classList.add('open');
+        }
+
+        function closeCard(id) {
+            document.getElementById(id).classList.remove('open');
+        }
+
+        const black = document.getElementById("black");
+        const white = document.getElementById("white");
+        const body = document.getElementById("body");
+
+        black.addEventListener("click", () => {
+            body.classList.remove("white-mode");
+            body.classList.add("black-mode");
+        });
+
+        white.addEventListener("click", () => {
+            body.classList.remove("black-mode");
+            body.classList.add("white-mode");
+        });
+
+    </script>
+
+</body>
+
+</html>
