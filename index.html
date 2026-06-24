@@ -17,10 +17,25 @@
     <div class="cont">
 
         <div class="button">
-            <button class="btn-home" onclick="openCard('pup')">Home</button>
-            <button class="btn-home" onclick="openCard('puuup')">Projects</button>
-            <button class="btn-home" onclick="openCard('puup')">Price</button>
-            <button class="btn-home" onclick="openCard('m')">Cell</button>
+            <button class="btn-home" onclick="openCard('pup')">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </button>
+
+            <button class="btn-home" onclick="openCard('puuup')">
+                <i class="fa-solid fa-code"></i>
+                Projects
+            </button>
+
+            <button class="btn-home" onclick="openCard('puup')">
+                <i class="fa-solid fa-dollar-sign"></i>
+                Price
+            </button>
+
+            <button class="btn-home" onclick="openCard('m')">
+                <i class="fa-solid fa-phone"></i>
+                Contact
+            </button>
         </div>
 
         <div class="card" id="pup">
@@ -55,7 +70,7 @@
 
             <br><br>
 
-            <a href="#" >
+            <a href="#">
                 https://my-web-git-main-mohammedcom.vercel.app/index.html
             </a>
 
@@ -106,6 +121,9 @@
             body.classList.remove("black-mode");
             body.classList.add("white-mode");
         });
+        window.onload = () => {
+            openCard('pup');
+        };
 
     </script>
 

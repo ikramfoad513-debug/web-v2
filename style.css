@@ -129,9 +129,11 @@ body {
     padding: 15px;
     border-radius: 40px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     gap: 10px;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .btn-home {
@@ -140,7 +142,12 @@ body {
     padding: 10px 30px;
     cursor: pointer;
     transition: .3s;
+    
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
+
 
 .btn-home:hover {
     transform: scale(1.05);
@@ -225,10 +232,14 @@ div h1 {
     .btn-home {
         padding: 8px 15px;
         font-size: 14px;
+        padding:8px 12px;
+        font-size:13px;
     }
 
     .button {
         gap: 5px;
+        width:95%;
+        flex-wrap:wrap;
     }
 
     .card {
@@ -244,3 +255,7 @@ div h1 {
         max-width: 350px;
     }
 }
+
+
+  
+    
